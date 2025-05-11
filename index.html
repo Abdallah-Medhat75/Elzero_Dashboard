@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="css/framework.css">
+        <link rel="stylesheet" href="css/master.css">
+        <!-- Open Sans Font From Google -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page">
+            <aside>
+                <h3>Elzero</h3>
+                <ul>
+                    <li>
+                        <a class="active flex-center" href="index.html">
+                            <i class="fa-regular fa-chart-bar fa-fw"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="settings.html">
+                            <i class="fa-solid fa-gear fa-fw"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="profile.html">
+                            <i class="fa-regular fa-user fa-fw"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="projects.html">
+                            <i class="fa-solid fa-diagram-project fa-fw"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="courses.html">
+                            <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                            <span>Courses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="friends.html">
+                            <i class="fa-regular fa-circle-user fa-fw"></i>
+                            <span>Friends</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="files.html">
+                            <i class="fa-regular fa-file fa-fw"></i>
+                            <span>Files</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-center" href="plans.html">
+                            <i class="fa-regular fa-credit-card fa-fw"></i>
+                            <span>Plans</span>
+                        </a>
+                    </li>
+                    </ul>
+            </aside>
+            <section>
+                <header class="sec-padding">
+                    <div class="container">
+                        <form action="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="header-text" placeholder="Type A Keyword">
+                        </form>
+                        <div class="profile flex-center">
+                            <span>
+                                <i class="fa-solid fa-bell"></i>
+                            </span>
+                            <img src="imgs/avatar.png" alt="">
+                        </div>
+                    </div>
+                </header>
+                <h1 class="main-title">Dashboard</h1>
+                <div class="wrapper">
+                    <div class="container grid-2">
+                        <div class="welcome">
+                            <div class="heading">
+                                <div class="text">
+                                    <h2>Welcome</h2>
+                                    <p>Elzero</p>
+                                </div>
+                                <img src="imgs/welcome.png" alt="">
+                            </div>
+                            <img src="imgs/avatar.png" alt="">
+                            <div class="content">
+                                <div>Osama Elzero<span>Developer</span></div>
+                                <div>75<span>Projects</span></div>
+                                <div>$9500<span>Earned</span></div>
+                            </div>
+                            <a href="profile.html" class="blue-shape">Profile</a>
+                        </div>
+                        <div class="quick">
+                            <h2>Quick Draft</h2>
+                            <p>Write A Draft For Your Ideas</p>
+                            <form action="">
+                                <input type="text" name="quick-text" placeholder="Title">
+                                <textarea name="quick-area" placeholder="Your Thouhgt"></textarea>
+                                <input class="blue-shape" type="submit" value="Save">
+                            </form>
+                        </div>
+                        <div class="targets">
+                            <h2>Yearly Targets</h2>
+                            <p>Targets Of The Year</p>
+                            <div class="holder">
+                                <div class="tar-row">
+                                    <div class="icon flex-center" style="background-color: rgb(0 117 255 / 20%);">
+                                        <i class="fa-solid fa-dollar-sign fa-lg" style="color: #0075ff;"></i>
+                                    </div>
+                                    <div class="details">
+                                        <span>Money</span>
+                                        <span>$20.000</span>
+                                        <span class="line" style="background-image: linear-gradient(to right, #0075ff 80%, rgb(0 117 255 / 20%) 80%);" number="80%"></span>
+                                        <!-- <span class="line" style="background-color: #0075ff;" number="75%"></span> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="holder">
+                                <div class="tar-row">
+                                    <div class="icon flex-center" style="background-color: rgb(245 158 11 / 20%);">
+                                        <i class="fa-solid fa-code fa-lg" style="color: #f59e0b;"></i>
+                                    </div>
+                                    <div class="details">
+                                        <span>Projects</span>
+                                        <span>40</span>
+                                        <span class="line" style="background-image: linear-gradient(to right, #f59e0b 55%, rgb(245 158 11 / 20%) 55%);" number="55%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="holder">
+                                <div class="tar-row">
+                                    <div class="icon flex-center" style="background-color: rgb(34 197 94 / 20%);">
+                                        <i class="fa-solid fa-user fa-lg" style="color: #22c55e;"></i>
+                                    </div>
+                                    <div class="details">
+                                        <span>Team</span>
+                                        <span>12</span>
+                                        <span class="line" style="background-image: linear-gradient(to right, #22c55e 75%, rgb(34 197 94 / 20%) 75%);" number="75%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tickets">
+                            <h2>Tickets Statistics</h2>
+                            <p>Everything About Support Tickets</p>
+                            <div class="details">
+                                <div class="card">
+                                    <i class="fa-regular fa-rectangle-list fa-2x orange"></i>
+                                    <h3>2500</h3>
+                                    <span>Total</span>
+                                </div>
+                                <div class="card">
+                                    <i class="fa-solid fa-spinner fa-2x blue"></i>
+                                    <h3>500</h3>
+                                    <span>Pending</span>
+                                </div>
+                                <div class="card">
+                                    <i class="fa-regular fa-circle-check fa-2x green"></i>
+                                    <h3>2500</h3>
+                                    <span>Closed</span>
+                                </div>
+                                <div class="card">
+                                    <i class="fa-regular fa-rectangle-xmark fa-2x red"></i>
+                                    <h3>100</h3>
+                                    <span>Deleted</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest-news">
+                            <h2>Latest News</h2>
+                            <div class="box">
+                                <img src="imgs/news-01.png" alt="">
+                                <div class="text">
+                                    <h4>Create SASS Section</h4>
+                                    <p>New SASS Examples & Tutorials</p>
+                                </div>
+                                <span class="blue-shape">3 Days Ago</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/news-02.png" alt="">
+                                <div class="text">
+                                    <h4>Changed The Design</h4>
+                                    <p>A Brand New Webite Design</p>
+                                </div>
+                                <span class="blue-shape">5 Days Ago</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/news-03.png" alt="">
+                                <div class="text">
+                                    <h4>Team Increased</h4>
+                                    <p>3 Developers Joined The Team</p>
+                                </div>
+                                <span class="blue-shape">7 Days Ago</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/news-04.png" alt="">
+                                <div class="text">
+                                    <h4>Added Payment Gateway</h4>
+                                    <p>Many New Payment Gateways Added</p>
+                                </div>
+                                <span class="blue-shape">9 Days Ago</span>
+                            </div>
+                        </div>
+                        <div class="latest-tasks">
+                            <h2>Latest Tasks</h2>
+                            <div class="box">
+                                <div class="info">
+                                    <h4>Record One New Video</h4>
+                                    <p>Record Python Create exe Project</p>
+                                </div>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </div>
+                            <div class="box">
+                                <div class="info">
+                                    <h4>Write Article</h4>
+                                    <p>Write Low Level vs High Level Languages</p>
+                                </div>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </div>
+                            <div class="box">
+                                <div class="info">
+                                    <h4>Finish Project</h4>
+                                    <p>Publish Academy Programming Project</p>
+                                </div>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </div>
+                            <div class="box finished">
+                                <div class="info">
+                                    <h4>Attend The Meeting</h4>
+                                    <p>Attend The Project Business Analysis Meeting</p>
+                                </div>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </div>
+                            <div class="box">
+                                <div class="info">
+                                    <h4>Finish Lesson</h4>
+                                    <p>Finish Teaching Flex Box</p>
+                                </div>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </div>
+                        </div>
+                        <!-- Start Top Search -->
+                        <div class="top-search">
+                            <h2>Top Search Items</h2>
+                            <div class="box example">
+                                <p>Keyword</p>
+                                <p>Search Count</p>
+                            </div>
+                            <div class="box">
+                                <p>Programming</p>
+                                <span class="blue-shape">220</span>
+                            </div>
+                            <div class="box">
+                                <p>JavaScript</p>
+                                <span class="blue-shape">180</span>
+                            </div>
+                            <div class="box">
+                                <p>PHP</p>
+                                <span class="blue-shape">160</span>
+                            </div>
+                            <div class="box">
+                                <p>Code</p>
+                                <span class="blue-shape">145</span>
+                            </div>
+                            <div class="box">
+                                <p>Design</p>
+                                <span class="blue-shape">110</span>
+                            </div>
+                            <div class="box">
+                                <p>Logic</p>
+                                <span class="blue-shape">95</span>
+                            </div>
+                        </div>
+                        <!-- End Top Search -->
+                        <!-- Start Uploads -->
+                        <div class="uploads">
+                            <h2>Latest Uploads</h2>
+                            <div class="box">
+                                <img src="imgs/pdf.svg" alt="">
+                                <div class="text">
+                                    <h4>My-file.pdf</h4>
+                                    <p>Elzero</p>
+                                </div>
+                                <span class="blue-shape">2.9mb</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/avi.svg" alt="">
+                                <div class="text">
+                                    <h4>My-Video-File.avi</h4>
+                                    <p>Admin</p>
+                                </div>
+                                <span class="blue-shape">4.9mb</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/psd.svg" alt="">
+                                <div class="text">
+                                    <h4>My-Psd-File.psd</h4>
+                                    <p>Osama</p>
+                                </div>
+                                <span class="blue-shape">4.5mb</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/zip.svg" alt="">
+                                <div class="text">
+                                    <h4>My-Zip-File.zip</h4>
+                                    <p>User</p>
+                                </div>
+                                <span class="blue-shape">8.9mb</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/dll.svg" alt="">
+                                <div class="text">
+                                    <h4>My-Dll-File.dll</h4>
+                                    <p>Admin</p>
+                                </div>
+                                <span class="blue-shape">4.9mb</span>
+                            </div>
+                            <div class="box">
+                                <img src="imgs/eps.svg" alt="">
+                                <div class="text">
+                                    <h4>My-Eps-File.eps</h4>
+                                    <p>Designer</p>
+                                </div>
+                                <span class="blue-shape">8.9mb</span>
+                            </div>
+                        </div>
+                        <!-- End Uploads -->
+                        <!-- Start Progress -->
+                        <div class="progress">
+                            <h2>Last Project Progress</h2>
+                            <ul>
+                                <li>Got The Project</li>
+                                <li>Started The Project</li>
+                                <li>The Project About To Finish</li>
+                                <li class="now">Test The Project</li>
+                                <li class="future">Finish The Project & Get Money</li>
+                            </ul>
+                        </div>
+                        <!-- End Progress -->
+                        <!-- Start Reminders -->
+                        <div class="reminder">
+                            <h2>Latest Uploads</h2>
+                            <div class="box">
+                                <span class="bg-blue"></span>
+                                <div class="text">
+                                    <h4>Check My Tasks List</h4>
+                                    <p>28/09/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <span class="bg-green"></span>
+                                <div class="text">
+                                    <h4>Check My Projects</h4>
+                                    <p>26/10/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <span class="bg-orange"></span>
+                                <div class="text">
+                                    <h4>Call All My Clients</h4>
+                                    <p>05/11/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <span class="bg-red"></span>
+                                <div class="text">
+                                    <h4>Finish The Development Workshop</h4>
+                                    <p>20/12/2022 - 12:00am</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Reminders -->
+                        <!-- Start Latest Posts -->
+                        <div class="post">
+                            <h2>Latest Post</h2>
+                            <div class="profile">
+                                <img src="imgs/avatar.png" alt="">
+                                <div class="text">
+                                    <h4>Osama Elzero</h4>
+                                    <p>About 3 Hours Ago</p>
+                                </div>
+                            </div>
+                            <q>
+                                You can fool all of the people some of the time, and some of the people all of the time, but you can't fool all of the people all of the time.
+                            </q>
+                            <div class="emotes">
+                                <span>1.7 K</span>
+                                <span>500</span>
+                            </div>
+                        </div>
+                        <!-- End Latest Posts -->
+                        <!-- Start Social -->
+                        <div class="social">
+                            <h2>Social Media Stats</h2>
+                            <ul>
+                                <li class="twitter">
+                                    <div class="icon flex-center">
+                                        <i class="fa-brands fa-x-twitter fa-2x"></i>
+                                    </div>
+                                    <h4>
+                                        90K Followers
+                                        <a class="span-shape" href="https://www.x.com" target="_blank">Follow</a>
+                                    </h4>
+                                </li>
+                                <li class="facebook">
+                                    <div class="icon flex-center">
+                                        <i class="fa-brands fa-facebook-f fa-2x"></i>
+                                    </div>
+                                    <h4>
+                                        2M Like
+                                        <a class="span-shape" href="https://www.facebook.com" target="_blank">Like</a>
+                                    </h4>
+                                </li>
+                                <li class="youtube">
+                                    <div class="icon flex-center">
+                                        <i class="fa-brands fa-youtube fa-2x"></i>
+                                    </div>
+                                    <h4>
+                                        1M Subs
+                                        <a class="span-shape" href="https://www.youtube.com" target="_blank">Subscribe</a>
+                                    </h4>
+                                </li>
+                                <li class="linkedin">
+                                    <div class="icon flex-center">
+                                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                                    </div>
+                                    <h4>
+                                        70K Followers
+                                        <a class="span-shape" href="https://www.linkedin.com" target="_blank">Follow</a>
+                                    </h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social -->
+                        <!-- Start Projects -->
+                        <div class="projects">
+                            <h2>Projects</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Finish Date</th>
+                                        <th>Client</th>
+                                        <th>Price</th>
+                                        <th>Team</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ministry Wikipedia</td>
+                                        <td>10 May 2022</td>
+                                        <td>Ministry</td>
+                                        <td>$5300</td>
+                                        <td>
+                                            <div class="image-hold">
+                                                <img src="imgs/team-01.png" alt="">
+                                                <img src="imgs/team-02.png" alt="">
+                                                <img src="imgs/team-03.png" alt="">
+                                                <img src="imgs/team-04.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="span-shape bg-orange">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elzero Shop</td>
+                                        <td>12 Oct 2021</td>
+                                        <td>Elzero Company</td>
+                                        <td>$1500</td>
+                                        <td>
+                                            <div class="image-hold">
+                                                <img src="imgs/team-01.png" alt="">
+                                                <img src="imgs/team-02.png" alt="">
+                                                <img src="imgs/team-04.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="span-shape bg-blue">In Progress</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bouba App</td>
+                                        <td>05 Sep 2021</td>
+                                        <td>Bouba</td>
+                                        <td>$800</td>
+                                        <td>
+                                            <div class="image-hold">
+                                                <img src="imgs/team-01.png" alt="">
+                                                <img src="imgs/team-03.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="span-shape bg-green">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yousef Website</td>
+                                        <td>22 May 2021</td>
+                                        <td>Abdallah</td>
+                                        <td>$600</td>
+                                        <td>
+                                            <div class="image-hold">
+                                                <img src="imgs/team-01.png" alt="">
+                                                <img src="imgs/team-02.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="span-shape bg-green">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sayed Website</td>
+                                        <td>24 May 2021</td>
+                                        <td>Sayed</td>
+                                        <td>$300</td>
+                                        <td>
+                                            <div class="image-hold">
+                                                <img src="imgs/team-01.png" alt="">
+                                                <img src="imgs/team-03.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="span-shape bg-red">Rejected</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mental Omega</td>
+                                        <td>24 May 2005</td>
+                                        <td>Abdallah</td>
+                                        <td>$10</td>
+                                        <td>
+                                            <div class="image-hold">
+                                                <img src="imgs/team-01.png" alt="">
+                                                <img src="imgs/team-02.png" alt="">
+                                                <img src="imgs/team-03.png" alt="">
+                                                <img src="imgs/team-05.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="span-shape bg-green">Completed</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- End Projects -->
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="https://kit.fontawesome.com/ed80b4c56c.js" crossorigin="anonymous"></script>
+    </body>
+</html>

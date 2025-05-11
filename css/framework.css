@@ -1,0 +1,94 @@
+:root {
+    --blueColor: #0075ff;
+    --blueAltColor: #0d69d5;
+    --orangeColor: #f59e0b;
+    --greenColor: #22c55e;
+    --redColor: #f44336;
+    --greyColor: #888;
+    --mainTransition: 0.3s;
+    --mainBoxShadow: 0 0 10px #DDD;
+}
+/* Start Specific Seperates */
+.bg-blue {
+    background-color: var(--blueColor);
+}
+.blue {
+    color: var(--blueColor);
+}
+.bg-orange {
+    background-color: var(--orangeColor);
+}
+.orange {
+    color: var(--orangeColor);
+}
+.bg-red {
+    background-color: var(--redColor);
+}
+.red {
+    color: var(--redColor);
+}
+.bg-green {
+    background-color: var(--greenColor);
+}
+.green {
+    color: var(--greenColor);
+}
+/* End Specific Seperates */
+/* Start Big-Feat */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-2 {
+    display: grid;
+    gap: 20px;
+}
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+.sec-padding {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/* End Big-Feat */
+/* Start Component */
+.blue-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blueColor);
+    color: white;
+    width: fit-content;
+    height: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.span-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 23px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 0;
+    margin-left: auto;
+}
+@media (max-width: 767px) {
+    .blue-shape {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* End Component */

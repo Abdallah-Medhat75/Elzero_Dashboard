@@ -619,7 +619,7 @@ header .profile span::before {
         text-align: left;
     }
     .uploads .box h4 {
-        font-size: 14px;
+        font-size: 13px;
     }
     .uploads .box p {
         font-size: 11px;
@@ -714,14 +714,20 @@ header .profile span::before {
     font-size: 14px;
 }
 @media (max-width: 767px) {
+    .reminder .box .text {
+        padding-left: 15px;
+    }
     .reminder .box {
         text-align: left;
     }
+    .reminder .box .text {
+        padding-left: 10px;
+    }
     .reminder .box h4 {
-        font-size: 11px;
+        font-size: 10px;
     }
     .reminder .box p {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 /* End Reminder */

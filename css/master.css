@@ -78,7 +78,10 @@ aside {
     padding: 20px;
     width: 220px;
     box-shadow: var(--mainBoxShadow);
-    position: relative;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* positioning as fixed is not good here because it will make the aside out of the workflow */
     z-index: 100;
 }
 aside > h3 {

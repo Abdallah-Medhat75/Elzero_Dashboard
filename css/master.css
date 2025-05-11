@@ -278,17 +278,6 @@ header .profile span::before {
     font-size: 15px;
     color: var(--greyColor);
 }
-/* .wrapper .welcome a.visit {
-    background-color: var(--blueColor);
-    color: white;
-    font-weight: bold;
-    width: fit-content;
-    border-radius: 5px;
-    padding: 7px 10px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: 20px;
-} */
 @media (max-width: 767px) {
     .wrapper .container {
         display: grid;

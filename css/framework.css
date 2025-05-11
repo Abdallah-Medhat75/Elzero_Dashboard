@@ -91,4 +91,57 @@
         margin-right: auto;
     }
 }
+.toggle-switch {
+    display: flex;
+}
+.toggle-switch label {
+    width: 78px;
+    height: 30px;
+    background-color: #DDD;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: var(--mainTransition);
+}
+.toggle-switch label::before {
+    font-family: "FontAwesome";
+    content: "\f00d";
+    background-color: white;
+    color: #AAA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    transition: var(--mainTransition);
+}
+.toggle-switch input {
+    display: none; /* Note: Display none ONLY MAKES The Element out of the workflow and hidden, but it is not removed from the page, so when you click on the div you check the label, so the input getss checked */
+    /* Try to remove display none to know what this Note means */
+}
+.toggle-switch input:checked + label {
+    background-color: var(--blueColor);
+}
+.toggle-switch input:checked + label::before {
+    content: "\f00c";
+    color: var(--blueColor);
+    left: calc(100% - 7px);
+    transform: translate(-100%, -50%);
+}
+@media (max-width: 767px) {
+    .toggle-switch label {
+        width: 60px;
+        height: 30px;
+    }
+    .toggle-switch label::before {
+        width: 17x;
+        height: 17px;
+        font-size: 13px;
+    }
+}
 /* End Component */

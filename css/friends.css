@@ -1,0 +1,364 @@
+/* Start Variables */
+:root {
+    --blueColor: #0075ff;
+    --blueAltColor: #0d69d5;
+    --orangeColor: #f59e0b;
+    --greenColor: #22c55e;
+    --redColor: #f44336;
+    --greyColor: #888;
+    --mainTransition: 0.3s;
+    --mainBoxShadow: 0 0 10px #DDD;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blueColor);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blueAltColor);
+}
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input,
+textarea {
+    font-family: inherit; /* Input And Text Area Placeholder Doesn't Automatically Inherit The Font Family */
+    display: block;
+    border: none;
+    outline: none;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+}
+span {
+    display: block;
+}
+.page {
+    background-color: #f1f5f9;
+    display: flex;
+    min-height: 100vh;
+}
+section {
+    flex-grow: 1;
+}
+.container {
+    padding: 10px 15px;
+}
+/* End Global Rules */
+/* Start Sidebar */
+aside {
+    font-family: "Caesar Dressing", system-ui;
+    background-color: white;
+    padding: 20px;
+    width: 220px;
+    box-shadow: var(--mainBoxShadow);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* positioning as fixed is not good here because it will make the aside out of the workflow */
+    z-index: 100;
+}
+aside > h3 {
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+aside > h3::before,
+aside > h3::after {
+    content: "";
+    background-color: black;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+aside > h3::before {
+    width: 80px;
+    height: 2px;
+    bottom: -20px;
+}
+aside > h3::after {
+    box-sizing: content-box;
+    bottom: -29px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+aside ul li a {
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    border-radius: 6px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+    /* margin-left: 15px; */
+}
+aside ul li a span {
+    width: 100px;
+}
+aside ul li a:hover,
+aside ul li a.active {
+    background-color: #f6f6f6;
+}
+aside ul li a span {
+    font-size: 14px;
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    aside {
+        width: 58px;
+        padding: 10px;
+    }
+    aside > h3 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    aside > h3::before,
+    aside > h3::after {
+        display: none;
+    }
+    aside ul li a span {
+        display: none;
+    }
+}
+h2 + p {
+    color: var(--greyColor);
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+/* End Sidebar */
+/* Start Header */
+header {
+    background-color: white;
+    box-shadow: var(--mainBoxShadowz);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header form {
+    display: flex;
+    align-items: center;
+    color: var(--greyColor);
+    border-radius: 10px;
+    border: 2px solid #EEE;
+    padding: 10px;
+}
+header form input {
+    font-size: 14px;
+    width: 130px;
+    margin-left: 10px;
+    transition: var(--mainTransition);
+}
+header form input::placeholder {
+    transition: var(--mainTransition);
+}
+header input:focus {
+    width: 160px;
+}
+header form input:focus::placeholder {
+    opacity: 0;
+}
+header img {
+    width: 32px;
+}
+header .profile {
+    gap: 15px;
+    font-size: 22px;
+}
+header .profile span {
+    position: relative;
+    z-index: 2;
+}
+header .profile span::before {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    right: -3px;
+}
+/* End Header */
+.main-title {
+    font-size: 2rem;
+    --mainTitlePadding: 15px;
+    padding: var(--mainTitlePadding);
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    background-image: linear-gradient(to right, black 33%, white 33%);
+    position: absolute;
+    left: var(--mainTitlePadding);
+    bottom: 0;
+}
+/* Start Wrapper */
+.wrapper .container > div {
+    padding: 20px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+}
+.wrapper .container > div > p {
+    color: var(--greyColor);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+    .wrapper .container {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr);
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 10px;
+    }
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    padding: 0;
+    text-align: left;
+    position: relative;
+}
+.box .contact {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9rem;
+}
+.box .contact span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.3s,
+                background-color 0.3s;
+}
+.box .contact span:hover {
+    background-color: var(--blueColor);
+    color: white;
+}
+.box .info {
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+.box .info p {
+    color: var(--greyColor);
+    font-size: 13px;
+}
+.box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.box ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.box .vip {
+    color: var(--orangeColor);
+    font-size: 50px;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.box ul li {
+    margin-top: 10px;
+    font-weight: 500;
+}
+.box ul li i {
+    width: 30px;
+    font-size: 1rem;
+    margin-right: 0;
+}
+.box .manipulate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.box .manipulate p {
+    color: var(--greyColor);
+}
+.box .manipulate a {
+    color: white;
+    font-weight: bold;
+    padding-top: 3px;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    width: 70px;
+    text-align: center;
+}
+.box .manipulate a:nth-of-type(1) {
+    background-color: var(--redColor);
+}
+.box .manipulate a:nth-of-type(2) {
+    background-color: var(--blueColor);
+}
+@media (min-width: 768px) {
+    .box ul {
+        border-top: 1px solid #EEE;
+        border-bottom: 1px solid #EEE;
+    }
+}
+@media (max-width: 767px) {
+    .box .manipulate {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .box .manipulate > a {
+        width: 100%;
+    }
+}
+/* End Wrapper */

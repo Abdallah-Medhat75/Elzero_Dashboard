@@ -1,0 +1,383 @@
+/* Start Variables */
+:root {
+    --blueColor: #0075ff;
+    --blueAltColor: #0d69d5;
+    --orangeColor: #f59e0b;
+    --greenColor: #22c55e;
+    --redColor: #f44336;
+    --greyColor: #888;
+    --mainTransition: 0.3s;
+    --mainBoxShadow: 0 0 10px #DDD;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blueColor);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blueAltColor);
+}
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+input,
+textarea {
+    font-family: inherit; /* Input And Text Area Placeholder Doesn't Automatically Inherit The Font Family */
+    display: block;
+    border: none;
+    outline: none;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+}
+span {
+    display: block;
+}
+.page {
+    background-color: #f1f5f9;
+    display: flex;
+    min-height: 100vh;
+}
+section {
+    flex-grow: 1;
+}
+.container {
+    padding: 10px 15px;
+}
+/* End Global Rules */
+/* Start Sidebar */
+aside {
+    font-family: "Caesar Dressing", system-ui;
+    background-color: white;
+    padding: 20px;
+    width: 220px;
+    box-shadow: var(--mainBoxShadow);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* positioning as fixed is not good here because it will make the aside out of the workflow */
+    z-index: 100;
+}
+aside > h3 {
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+aside > h3::before,
+aside > h3::after {
+    content: "";
+    background-color: black;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+aside > h3::before {
+    width: 80px;
+    height: 2px;
+    bottom: -20px;
+}
+aside > h3::after {
+    box-sizing: content-box;
+    bottom: -29px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+aside ul li a {
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    border-radius: 6px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+    /* margin-left: 15px; */
+}
+aside ul li a span {
+    width: 100px;
+}
+aside ul li a:hover,
+aside ul li a.active {
+    background-color: #f6f6f6;
+}
+aside ul li a span {
+    font-size: 14px;
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    aside {
+        width: 58px;
+        padding: 10px;
+    }
+    aside > h3 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    aside > h3::before,
+    aside > h3::after {
+        display: none;
+    }
+    aside ul li a span {
+        display: none;
+    }
+}
+h2 + p {
+    color: var(--greyColor);
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+/* End Sidebar */
+/* Start Header */
+header {
+    background-color: white;
+    box-shadow: var(--mainBoxShadowz);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header form {
+    display: flex;
+    align-items: center;
+    color: var(--greyColor);
+    border-radius: 10px;
+    border: 2px solid #EEE;
+    padding: 10px;
+}
+header form input {
+    font-size: 14px;
+    width: 130px;
+    margin-left: 10px;
+    transition: var(--mainTransition);
+}
+header form input::placeholder {
+    transition: var(--mainTransition);
+}
+header input:focus {
+    width: 160px;
+}
+header form input:focus::placeholder {
+    opacity: 0;
+}
+header img {
+    width: 32px;
+}
+header .profile {
+    gap: 15px;
+    font-size: 22px;
+}
+header .profile span {
+    position: relative;
+    z-index: 2;
+}
+header .profile span::before {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    right: -3px;
+}
+/* End Header */
+.main-title {
+    font-size: 2rem;
+    --mainTitlePadding: 15px;
+    padding: var(--mainTitlePadding);
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 3px;
+    background-image: linear-gradient(to right, black 33%, white 33%);
+    position: absolute;
+    left: var(--mainTitlePadding);
+    bottom: 0;
+}
+/* Start Wrapper */
+.wrapper .container > div {
+    overflow: hidden;
+}
+.wrapper > .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+@media (max-width: 767px) {
+    .wrapper > .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+}
+.wrapper .container > div > p {
+    color: var(--greyColor);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.wrapper > .container .files {
+    flex-grow: 6;
+    background-color: inherit;
+}
+.wrapper > .container .files > div {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper > .container .files i {
+    color: var(--greyColor);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.wrapper > .container .files img {
+    display: block; /* Important To Make The Margin Auto Works */
+    width: 64px;
+    margin: 20px auto;
+    transition: var(--mainTransition);
+}
+.wrapper > .container .files img:hover {
+    transform: rotate(10deg);
+}
+.wrapper > .container .files p {
+    text-align: center;
+    font-size: 15px;
+}
+.wrapper > .container .files p + span {
+    color: var(--greyColor);
+    margin: 20px 0;
+    font-size: 14px;
+}
+.wrapper > .container .files .details {
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: var(--greyColor);
+    font-size: 14px;
+    border-top: 1px solid #EEE;
+}
+/* Start Stats */
+.wrapper > .container .stats {
+    padding: 20px;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 10px;
+}
+.wrapper > .container .stats ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 2px solid #EEE;
+    margin-top: 15px;
+}
+.wrapper > .container .stats ul li .details {
+    flex-grow: 1;
+    font-size: 13px;
+    line-height: 1.1;
+}
+.wrapper > .container .stats ul li > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+.wrapper > .container .stats ul li h4 {
+    font-weight: normal;
+}
+.wrapper > .container .stats ul li .details span {
+    color: var(--greyColor);
+    text-align: right;
+    padding-right: 15px;
+}
+.wrapper > .container .stats ul li p {
+    color: var(--greyColor);
+    font-weight: 600;
+}
+.wrapper > .container .stats a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    font-size: 13px;
+    background-color: var(--blueColor);
+    color: white;
+    font-weight: 600;
+    transition: background-color var(--mainTransition);
+}
+.wrapper > .container .stats a:hover {
+    background-color: var(--blueAltColor);
+}
+.wrapper > .container .stats a:hover i {
+    transform: translateY(1px);
+}
+.wrapper > .container .stats a:hover i {
+    animation: go-up 0.5s infinite alternate;
+}
+/* Inner - Start File Span Coloring */
+.wrapper > .container .stats ul li:nth-child(1) > span {
+    background-color: rgb(0 117 255 / 0.2);
+    color: rgb(0 117 255);
+}
+.wrapper > .container .stats ul li:nth-child(2) > span {
+    background-color: rgb(34 197 94 / 0.2);
+    color: rgb(34 197 94);
+}
+.wrapper > .container .stats ul li:nth-child(3) > span {
+    background-color: rgb(244 67 54 / 0.2);
+    color: rgb(244 67 54);
+}
+.wrapper > .container .stats ul li:nth-child(4) > span {
+    background-color: rgb(245 158 11 / 0.2);
+    color: rgb(245 158 11);
+}
+@keyframes go-up {
+    to {
+        transform: translateY(-5px);
+    }
+}
+/* Inner - End File Span Coloring */
+/* End Stats */
+/* End Wrapper */

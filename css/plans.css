@@ -230,19 +230,10 @@ header .profile span::before {
 }
 /* Start Wrapper */
 .wrapper .container > div {
+    padding: 20px;
     overflow: hidden;
-}
-.wrapper > .container {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-@media (max-width: 767px) {
-    .wrapper > .container {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: normal;
-    }
+    background-color: white;
+    border-radius: 10px;
 }
 .wrapper .container > div > p {
     color: var(--greyColor);
@@ -250,134 +241,94 @@ header .profile span::before {
     margin-bottom: 10px;
     font-size: 14px;
 }
-.wrapper > .container .files {
-    flex-grow: 6;
-    background-color: inherit;
-}
-.wrapper > .container .files > div {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-    overflow: hidden;
-    position: relative;
-}
-.wrapper > .container .files i {
-    color: var(--greyColor);
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.wrapper > .container .files img {
-    display: block; /* Important To Make The Margin Auto Works */
-    width: 64px;
-    margin: 20px auto;
-    transition: var(--mainTransition);
-}
-.wrapper > .container .files img:hover {
-    transform: rotate(10deg);
-}
-.wrapper > .container .files p {
-    text-align: center;
-    font-size: 15px;
-}
-.wrapper > .container .files p + span {
-    color: var(--greyColor);
-    margin: 20px 0;
-    font-size: 14px;
-}
-.wrapper > .container .files .details {
-    height: 30px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    color: var(--greyColor);
-    font-size: 14px;
-    border-top: 1px solid #EEE;
-}
-/* Start Stats */
-.wrapper > .container .stats {
-    padding: 20px;
-    flex-grow: 1;
-    background-color: white;
-    border-radius: 10px;
-}
-.wrapper > .container .stats ul li {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-    border: 2px solid #EEE;
-    margin-top: 15px;
-}
-.wrapper > .container .stats ul li .details {
-    flex-grow: 1;
-    font-size: 13px;
-    line-height: 1.1;
-}
-.wrapper > .container .stats ul li > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-}
-.wrapper > .container .stats ul li h4 {
-    font-weight: normal;
-}
-.wrapper > .container .stats ul li .details span {
-    color: var(--greyColor);
-    text-align: right;
-    padding-right: 5px;
-}
-.wrapper > .container .stats ul li p {
-    color: var(--greyColor);
-    font-weight: 600;
-}
-.wrapper > .container .stats a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 20px 45px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    font-size: 13px;
-    background-color: var(--blueColor);
-    color: white;
-    font-weight: 600;
-    transition: background-color var(--mainTransition);
-}
-.wrapper > .container .stats a:hover {
-    background-color: var(--blueAltColor);
-}
-.wrapper > .container .stats a:hover i {
-    transform: translateY(1px);
-}
-.wrapper > .container .stats a:hover i {
-    animation: go-up 0.5s infinite alternate;
-}
-/* Inner - Start File Span Coloring */
-.wrapper > .container .stats ul li:nth-child(1) > span {
-    background-color: rgb(0 117 255 / 0.2);
-    color: rgb(0 117 255);
-}
-.wrapper > .container .stats ul li:nth-child(2) > span {
-    background-color: rgb(34 197 94 / 0.2);
-    color: rgb(34 197 94);
-}
-.wrapper > .container .stats ul li:nth-child(3) > span {
-    background-color: rgb(244 67 54 / 0.2);
-    color: rgb(244 67 54);
-}
-.wrapper > .container .stats ul li:nth-child(4) > span {
-    background-color: rgb(245 158 11 / 0.2);
-    color: rgb(245 158 11);
-}
-@keyframes go-up {
-    to {
-        transform: translateY(-5px);
+@media (max-width: 767px) {
+    .wrapper .container {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr);
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 10px;
+        text-align: center;
     }
 }
-/* Inner - End File Span Coloring */
-/* End Stats */
+.box .heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+}
+.box .heading span {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 40px;
+    position: relative;
+}
+.box .heading span::before {
+    content: "$";
+    font-size: 25px;
+    position: absolute;
+    width: 5px;
+    aspect-ratio: 1;
+    top: 0;
+    left: -20px;
+}
+.box ul {
+    margin-top: 10px;
+}
+.box ul li {
+    height: 45px;
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #EEE;
+}
+.box ul li > i.fa-check {
+    color: var(--greenColor);
+}
+.box ul li > i.fa-xmark {
+    color: var(--redColor);
+}
+.box ul li .text {
+    font-weight: 500;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.box .span-shape {
+    width: fit-content;
+    font-size: 17px;
+    margin-top: 10px;
+    height: 30px;
+    color: white;
+    font-weight: 500;
+    margin-left: 0;
+    background-color: var(--blueColor);
+}
+/* Inner - Start Coloring */
+.box:nth-child(1) .heading {
+    background-color: var(--greenColor);
+    outline: 3px solid var(--greenColor);
+}
+.box:nth-child(1) a {
+    background-color: var(--greenColor);
+}
+.box:nth-child(2) .heading {
+    background-color: var(--blueColor);
+    outline: 3px solid var(--blueColor);
+}
+.box:nth-child(2) a {
+    background-color: var(--blueColor);
+}
+.box:nth-child(3) .heading {
+    background-color: var(--orangeColor);
+    outline: 3px solid var(--orangeColor);
+}
+.box:nth-child(3) a {
+    background-color: var(--orangeColor);
+}
+/* Inner - End Coloring */
 /* End Wrapper */
